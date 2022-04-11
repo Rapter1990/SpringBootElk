@@ -10,6 +10,6 @@ public interface IPersonService {
     public List<Person> allPersons();
     public Person savePerson(Person person);
     public Optional<Person> getPersonById(Long id);
-    public Person updatePerson(Person person);
+    public Person updatePerson(Long personId,Person personForUpdate);
     public void deletePersonById(Long id);
 }
