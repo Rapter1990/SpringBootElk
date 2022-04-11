@@ -1,0 +1,33 @@
+server:
+  port: 8077
+  servlet:
+    context-path: /api
+
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate.format_sql: true
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:mysql://localhost:3306/springbootexample?serverTimezone=Turkey}
+    dialect: org.hibernate.dialect.MySQL8Dialect
+    username: ${SPRING_DATASOURCE_USERNAME:springexample}
+    password: ${SPRING_DATASOURCE_PASSWORD:111111}
+
+elasticsearch:
+  cluster-name: spring-boot-cluster
+  host: localhost
+  port: 9300
+
+logging:
+  file:
+    name: Springboot-Elk.log
+  logback:
+    rollingpolicy:
+      file-name-pattern: Springboot-Elk-%d{yyyy-MM-dd}.%i.log
+      clean-history-on-start: true
+      max-file-size: 100KB
+      total-size-cap: 1MB
+      max-history: 14
