@@ -1,7 +1,9 @@
 package com.spingbootelk.main.model;
 
 import lombok.Builder;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -11,6 +13,8 @@ import java.time.LocalDate;
 @Entity
 @Table(name = "person")
 @NoArgsConstructor
+@Getter
+@Setter
 public class Person implements Serializable {
 
     @Id

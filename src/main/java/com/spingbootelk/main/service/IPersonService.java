@@ -11,5 +11,5 @@ public interface IPersonService {
     public Person savePerson(Person person);
     public Optional<Person> getPersonById(Long id);
     public Person updatePerson(Person person);
-    public Person deletePersonById(Long id);
+    public void deletePersonById(Long id);
 }
