@@ -1,10 +1,18 @@
+FROM openjdk:11 AS build
+
+COPY pom.xml mvnw ./
+RUN chmod +x mvnw
+COPY .mvn .mvn
+RUN ./mvnw dependency:resolve
+
+COPY src src
+RUN ./mvnw package
+
 # For Java 11,
 FROM adoptopenjdk/openjdk11:alpine-jre
 
-ARG JAR_FILE=SpringBootElk.jar
+WORKDIR SpringBootElk
 
-WORKDIR /opt/SpringBootElk
-
-COPY --from=maven /opt/SpringBootElk/target/${JAR_FILE} /opt/SpringBootElk/
+COPY --from=build target/*.jar SpringBootElk.jar
 
 ENTRYPOINT ["java","-jar","SpringBootElk.jar"]
