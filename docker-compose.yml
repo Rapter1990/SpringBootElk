@@ -1,0 +1,61 @@
+version: '3.8'
+services:
+  logstash:
+    image: docker.elastic.co/logstash/logstash:7.15.2
+    user: root
+    command: -f /etc/logstash/conf.d/
+    volumes:
+      - ./logstash/:/etc/logstash/conf.d/
+    ports:
+      - "5000:5000"
+    environment:
+      LS_JAVA_OPTS: "-Xmx256m -Xms256m"
+    depends_on:
+      - elasticsearch
+  kibana:
+    image: docker.elastic.co/kibana/kibana:7.15.2
+    user: root
+    volumes:
+      - ./kibana/:/usr/share/kibana/config/
+    ports:
+      - "5601:5601"
+    depends_on:
+      - elasticsearch
+    entrypoint: ["./bin/kibana", "--allow-root"]
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.15.2
+    user: root
+    volumes:
+      - ./elasticsearch/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    environment:
+      ES_JAVA_OPTS: "-Xmx256m -Xms256m"
+  app:
+    image: 'springbootelk:latest'
+    build:
+      context: .
+    container_name: SpringBootElk
+    depends_on:
+      - db
+      - logstash
+    ports:
+      - '8077:8077'
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://localhost:3306/springbootexample?serverTimezone=Turkey
+      - SPRING_DATASOURCE_USERNAME=springexample
+      - SPRING_DATASOURCE_PASSWORD=111111
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+  db:
+    container_name: db
+    image: 'mysql:latest'
+    ports:
+      - "3306:3306"
+    restart: always
+    environment:
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_ROOT_USERNAME: ${MYSQL_USER}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    volumes:
+      - db-data:/var/lib/mysql
