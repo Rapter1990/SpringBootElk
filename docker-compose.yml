@@ -48,14 +48,18 @@ services:
       - SPRING_DATASOURCE_PASSWORD=111111
       - SPRING_JPA_HIBERNATE_DDL_AUTO=update
   db:
-    container_name: db
+    container_name: mysql-latest
     image: 'mysql:latest'
     ports:
       - "3306:3306"
     restart: always
     environment:
       MYSQL_DATABASE: ${MYSQL_DATABASE}
-      MYSQL_ROOT_USERNAME: ${MYSQL_USER}
+      MYSQL_USER: ${MYSQL_USER}
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
     volumes:
       - db-data:/var/lib/mysql
+
+# Volumes
+volumes:
+  db-data:
