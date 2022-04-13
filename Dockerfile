@@ -6,7 +6,7 @@ COPY .mvn .mvn
 RUN ./mvnw dependency:resolve
 
 COPY src src
-RUN ./mvnw package
+RUN ./mvnw package -Dmaven.test.skip
 
 # For Java 11,
 FROM adoptopenjdk/openjdk11:alpine-jre
