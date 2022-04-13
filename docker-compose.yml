@@ -43,7 +43,7 @@ services:
     ports:
       - '8077:8077'
     environment:
-      - SPRING_DATASOURCE_URL=jdbc:mysql://localhost:3306/springbootexample?useSSL=false&serverTimezone=Turkey
+      - SPRING_DATASOURCE_URL=jdbc:mysql://db:3306/springbootexample?useSSL=false&serverTimezone=Turkey
       - SPRING_DATASOURCE_USERNAME=springexample
       - SPRING_DATASOURCE_PASSWORD=111111
       - SPRING_JPA_HIBERNATE_DDL_AUTO=update
