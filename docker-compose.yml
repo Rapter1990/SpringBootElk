@@ -5,7 +5,7 @@ services:
     user: root
     command: -f /etc/logstash/conf.d/
     volumes:
-      - ./logstash/:/etc/logstash/conf.d/
+      - ./elk/logstash/:/etc/logstash/conf.d/
     ports:
       - "5000:5000"
     environment:
@@ -16,7 +16,7 @@ services:
     image: docker.elastic.co/kibana/kibana:7.15.2
     user: root
     volumes:
-      - ./kibana/:/usr/share/kibana/config/
+      - ./elk/kibana/:/usr/share/kibana/config/
     ports:
       - "5601:5601"
     depends_on:
@@ -26,7 +26,7 @@ services:
     image: docker.elastic.co/elasticsearch/elasticsearch:7.15.2
     user: root
     volumes:
-      - ./elasticsearch/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+      - ./elk/elasticsearch/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
     ports:
       - "9200:9200"
       - "9300:9300"
@@ -51,7 +51,7 @@ services:
     container_name: db
     image: 'mysql:latest'
     ports:
-      - "3306:3306"
+      - "3366:3306"
     restart: always
     environment:
       MYSQL_DATABASE: ${MYSQL_DATABASE}
