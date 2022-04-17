@@ -6,7 +6,6 @@ services:
     command: -f /etc/logstash/conf.d/
     volumes:
       - ./elk/logstash/:/etc/logstash/conf.d/
-      - ./Springboot-Elk.log:/tmp/logs/Springboot-Elk.log
     ports:
       - "5000:5000"
     environment:
