@@ -19,8 +19,12 @@ services:
     links:
       - "logstash:logstash"
     volumes:
+      - /var/run/docker.sock:/host_docker/docker.sock
+      - /var/lib/docker:/host_docker/var/lib/docker
+      - ./Springboot-Elk.log:/usr/share/filebeat/mylog
       - ./filebeat/filebeat.yml:/usr/share/filebeat/filebeat.yml
-
+    depends_on:
+      - logstash
   kibana:
     image: docker.elastic.co/kibana/kibana:7.15.2
     user: root
