@@ -1,8 +1,9 @@
 filebeat.inputs:
   - type: docker
     enabled: true
-    paths:
-      - /usr/share/filebeat/mylog/*.log
+    containers:
+      ids:
+        - "*"
 
 
 processors:
