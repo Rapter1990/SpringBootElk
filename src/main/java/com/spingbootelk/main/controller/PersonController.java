@@ -19,12 +19,14 @@ public class PersonController {
     @Autowired
     PersonService personService;
 
+    // http://localhost:8077/api/api/persons
     @GetMapping("/persons")
     public List<Person> getPersons(){
         LOGGER.info("PersonController | getPersons is started");
         return personService.allPersons();
     }
 
+    // http://localhost:8077/api/api/persons/save
     @PostMapping("/persons/save")
     public Person addPerson(@RequestBody Person person){
         LOGGER.info("PersonController | addPerson is started");
@@ -33,6 +35,7 @@ public class PersonController {
         return person;
     }
 
+    // http://localhost:8077/api/api/persons/{id}
     @GetMapping("/persons/{id}")
     public Person findPersonById(@PathVariable("id") Long personId){
         LOGGER.info("PersonController | findPersonById is started");
@@ -42,6 +45,7 @@ public class PersonController {
         return person;
     }
 
+    // http://localhost:8077/api/api/persons/{id}
     @PutMapping("/persons/{id}")
     public Person updatePerson(@PathVariable(value="id") Long personId, @RequestBody Person personBody){
         LOGGER.info("PersonController | updatePerson is started");
@@ -50,6 +54,7 @@ public class PersonController {
         return updatedPerson;
     }
 
+    // http://localhost:8077/api/api/persons/{id}
     @DeleteMapping("/persons/{id}")
     public void deletePerson(@PathVariable(value="id") Long personId) {
         LOGGER.info("PersonController | deletePerson is started");
