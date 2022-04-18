@@ -4,11 +4,12 @@ filebeat.inputs:
     containers:
       ids:
         - "*"
+      path: "/host_docker/var/lib/docker/containers"
 
 
 processors:
   - add_docker_metadata:
-      host: "unix:///var/run/docker.sock"
+      host: "unix:///host_docker/docker.sock"
 
 filebeat.config.modules:
   path: ${path.config}/modules.d/*.yml
