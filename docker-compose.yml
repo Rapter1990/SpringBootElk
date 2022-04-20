@@ -13,6 +13,8 @@ services:
       LS_JAVA_OPTS: "-Xmx256m -Xms256m"
     depends_on:
       - elasticsearch
+    networks:
+      - elk
 
   filebeat:
     build:
@@ -35,6 +37,8 @@ services:
     depends_on:
       - elasticsearch
     entrypoint: ["./bin/kibana", "--allow-root"]
+    networks:
+      - elk
 
   elasticsearch:
     image: docker.elastic.co/elasticsearch/elasticsearch:7.15.2
@@ -46,6 +50,9 @@ services:
       - "9300:9300"
     environment:
       ES_JAVA_OPTS: "-Xmx256m -Xms256m"
+    networks:
+      - elk
+
   app:
     image: 'springbootelk:latest'
     build:
@@ -79,3 +86,7 @@ services:
 # Volumes
 volumes:
   db-data:
+
+
+networks:
+  elk:
