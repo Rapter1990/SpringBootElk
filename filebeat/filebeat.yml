@@ -4,19 +4,17 @@ filebeat.inputs:
     containers:
       ids:
         - "*"
-      path: "/host_docker/var/lib/docker/containers"
-
 
 processors:
   - add_docker_metadata:
-      host: "unix:///host_docker/docker.sock"
+      host: "unix:///var/run/docker.sock"
 
 filebeat.config.modules:
   path: ${path.config}/modules.d/*.yml
   reload.enabled: false
 
 output.logstash:
-  hosts: ["logstash:5000"]
+  hosts: ["logstash:5044"]
 
 log files:
 logging.level: info

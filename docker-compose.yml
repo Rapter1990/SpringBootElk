@@ -8,7 +8,7 @@ services:
       - ./elk/logstash/:/etc/logstash/conf.d/
       - ./Springboot-Elk.log:/tmp/logs/Springboot-Elk.log
     ports:
-      - "5000:5000"
+      - "5044:5044"
     environment:
       LS_JAVA_OPTS: "-Xmx256m -Xms256m"
     depends_on:
@@ -27,6 +27,7 @@ services:
       - /var/lib/docker:/host_docker/var/lib/docker
     depends_on:
       - logstash
+
   kibana:
     image: docker.elastic.co/kibana/kibana:7.15.2
     user: root

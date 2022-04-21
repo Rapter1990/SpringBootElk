@@ -1,0 +1,162 @@
+2022-04-14 02:44:51.836  INFO 17304 --- [main] com.spingbootelk.main.MainApplication    : Starting MainApplication using Java 15.0.2 on DESKTOP-E7L6HLO with PID 17304 (C:\Users\Noyan\IdeaProjects\SpringBootElk\target\classes started by Noyan in C:\Users\Noyan\IdeaProjects\SpringBootElk)
+2022-04-14 02:44:51.845  INFO 17304 --- [main] com.spingbootelk.main.MainApplication    : No active profile set, falling back to 1 default profile: "default"
+2022-04-14 02:44:52.761  INFO 17304 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-14 02:44:52.857  INFO 17304 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 78 ms. Found 1 JPA repository interfaces.
+2022-04-14 02:44:53.569  INFO 17304 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8077 (http)
+2022-04-14 02:44:53.585  INFO 17304 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-14 02:44:53.585  INFO 17304 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-04-14 02:44:53.769  INFO 17304 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2022-04-14 02:44:53.777  INFO 17304 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1869 ms
+2022-04-14 02:44:53.971  INFO 17304 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-14 02:44:54.055  INFO 17304 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.7.Final
+2022-04-14 02:44:54.232  INFO 17304 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-04-14 02:44:54.344  INFO 17304 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-04-14 02:44:54.523  INFO 17304 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-04-14 02:44:54.555  INFO 17304 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-04-14 02:44:55.400  INFO 17304 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-14 02:44:55.408  INFO 17304 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-14 02:44:55.820  WARN 17304 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-14 02:44:56.256  WARN 17304 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8077 is already in use
+2022-04-14 02:44:56.264  INFO 17304 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-04-14 02:44:56.264  INFO 17304 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-04-14 02:44:56.272  INFO 17304 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-04-14 02:44:56.280  INFO 17304 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-04-14 02:44:56.296  INFO 17304 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-04-14 02:44:56.312 ERROR 17304 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8077 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8077 or configure this application to listen on another port.
+
+2022-04-14 02:46:26.194  INFO 21432 --- [main] com.spingbootelk.main.MainApplication    : Starting MainApplication using Java 15.0.2 on DESKTOP-E7L6HLO with PID 21432 (C:\Users\Noyan\IdeaProjects\SpringBootElk\target\classes started by Noyan in C:\Users\Noyan\IdeaProjects\SpringBootElk)
+2022-04-14 02:46:26.196  INFO 21432 --- [main] com.spingbootelk.main.MainApplication    : No active profile set, falling back to 1 default profile: "default"
+2022-04-14 02:46:27.414  INFO 21432 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-14 02:46:27.511  INFO 21432 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 75 ms. Found 1 JPA repository interfaces.
+2022-04-14 02:46:28.275  INFO 21432 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8077 (http)
+2022-04-14 02:46:28.285  INFO 21432 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-14 02:46:28.285  INFO 21432 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-04-14 02:46:28.499  INFO 21432 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2022-04-14 02:46:28.499  INFO 21432 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2220 ms
+2022-04-14 02:46:28.760  INFO 21432 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-14 02:46:28.823  INFO 21432 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.7.Final
+2022-04-14 02:46:28.976  INFO 21432 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-04-14 02:46:29.128  INFO 21432 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-04-14 02:46:29.327  INFO 21432 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-04-14 02:46:29.354  INFO 21432 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-04-14 02:46:30.057  INFO 21432 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-14 02:46:30.073  INFO 21432 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-14 02:46:30.518  WARN 21432 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-14 02:46:30.868  WARN 21432 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8077 is already in use
+2022-04-14 02:46:30.870  INFO 21432 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-04-14 02:46:30.870  INFO 21432 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-04-14 02:46:30.880  INFO 21432 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-04-14 02:46:30.880  INFO 21432 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-04-14 02:46:30.900  INFO 21432 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-04-14 02:46:30.921 ERROR 21432 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8077 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8077 or configure this application to listen on another port.
+
+2022-04-14 02:46:45.227  INFO 15648 --- [main] com.spingbootelk.main.MainApplication    : Starting MainApplication using Java 15.0.2 on DESKTOP-E7L6HLO with PID 15648 (C:\Users\Noyan\IdeaProjects\SpringBootElk\target\classes started by Noyan in C:\Users\Noyan\IdeaProjects\SpringBootElk)
+2022-04-14 02:46:45.227  INFO 15648 --- [main] com.spingbootelk.main.MainApplication    : No active profile set, falling back to 1 default profile: "default"
+2022-04-14 02:46:45.968  INFO 15648 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-14 02:46:46.009  INFO 15648 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43 ms. Found 1 JPA repository interfaces.
+2022-04-14 02:46:46.622  INFO 15648 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8077 (http)
+2022-04-14 02:46:46.638  INFO 15648 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-14 02:46:46.638  INFO 15648 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-04-14 02:46:46.886  INFO 15648 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2022-04-14 02:46:46.886  INFO 15648 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1595 ms
+2022-04-14 02:46:47.086  INFO 15648 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-14 02:46:47.136  INFO 15648 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.7.Final
+2022-04-14 02:46:47.239  INFO 15648 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-04-14 02:46:47.332  INFO 15648 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-04-14 02:46:47.473  INFO 15648 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-04-14 02:46:47.505  INFO 15648 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-04-14 02:46:48.137  INFO 15648 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-14 02:46:48.153  INFO 15648 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-14 02:46:48.468  WARN 15648 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-14 02:46:48.776  WARN 15648 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8077 is already in use
+2022-04-14 02:46:48.776  INFO 15648 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-04-14 02:46:48.776  INFO 15648 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-04-14 02:46:48.792  INFO 15648 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-04-14 02:46:48.792  INFO 15648 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-04-14 02:46:48.807  INFO 15648 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-04-14 02:46:48.823 ERROR 15648 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8077 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8077 or configure this application to listen on another port.
+
+2022-04-14 02:47:17.460  INFO 14900 --- [main] com.spingbootelk.main.MainApplication    : Starting MainApplication using Java 15.0.2 on DESKTOP-E7L6HLO with PID 14900 (C:\Users\Noyan\IdeaProjects\SpringBootElk\target\classes started by Noyan in C:\Users\Noyan\IdeaProjects\SpringBootElk)
+2022-04-14 02:47:17.460  INFO 14900 --- [main] com.spingbootelk.main.MainApplication    : No active profile set, falling back to 1 default profile: "default"
+2022-04-14 02:47:18.172  INFO 14900 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-14 02:47:18.234  INFO 14900 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43 ms. Found 1 JPA repository interfaces.
+2022-04-14 02:47:18.651  INFO 14900 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8077 (http)
+2022-04-14 02:47:18.651  INFO 14900 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-14 02:47:18.651  INFO 14900 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-04-14 02:47:18.836  INFO 14900 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2022-04-14 02:47:18.836  INFO 14900 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1316 ms
+2022-04-14 02:47:18.990  INFO 14900 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-14 02:47:19.036  INFO 14900 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.7.Final
+2022-04-14 02:47:19.138  INFO 14900 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-04-14 02:47:19.199  INFO 14900 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-04-14 02:47:19.337  INFO 14900 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-04-14 02:47:19.353  INFO 14900 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-04-14 02:47:19.857  INFO 14900 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-14 02:47:19.857  INFO 14900 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-14 02:47:20.107  WARN 14900 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-14 02:47:20.377  INFO 14900 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8077 (http) with context path '/api'
+2022-04-14 02:47:20.392  INFO 14900 --- [main] com.spingbootelk.main.MainApplication    : Started MainApplication in 3.448 seconds (JVM running for 4.327)
+2022-04-14 02:47:27.285  INFO 14900 --- [http-nio-8077-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-14 02:47:27.285  INFO 14900 --- [http-nio-8077-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-04-14 02:47:27.289  INFO 14900 --- [http-nio-8077-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2022-04-14 02:47:27.425  INFO 14900 --- [http-nio-8077-exec-2] c.s.main.controller.PersonController     : PersonController | addPerson is started
+2022-04-14 02:47:27.465  INFO 14900 --- [http-nio-8077-exec-2] c.s.main.service.impl.PersonService      : PersonService | savePerson is started
+2022-04-14 02:47:27.557  INFO 14900 --- [http-nio-8077-exec-2] c.s.main.controller.PersonController     : PersonController | addPerson | Person is saved
+2022-04-14 02:47:34.038  INFO 14900 --- [http-nio-8077-exec-3] c.s.main.controller.PersonController     : PersonController | findPersonById is started
+2022-04-14 02:47:34.038  INFO 14900 --- [http-nio-8077-exec-3] c.s.main.service.impl.PersonService      : PersonService | getPersonById is started
+2022-04-14 02:47:34.038  INFO 14900 --- [http-nio-8077-exec-3] c.s.main.service.impl.PersonService      : PersonService | getPersonById | id : 2
+2022-04-14 02:47:34.071  INFO 14900 --- [http-nio-8077-exec-3] c.s.main.controller.PersonController     : PersonController | findPersonById | Person is found
+2022-04-14 02:47:37.307  INFO 14900 --- [http-nio-8077-exec-4] c.s.main.controller.PersonController     : PersonController | getPersons is started
+2022-04-14 02:47:37.307  INFO 14900 --- [http-nio-8077-exec-4] c.s.main.service.impl.PersonService      : PersonService | getPersons is started
+2022-04-14 02:47:37.453  INFO 14900 --- [http-nio-8077-exec-4] c.s.main.service.impl.PersonService      : PersonService | getPersons | persons Size : 1
+2022-04-14 02:47:46.662  INFO 14900 --- [http-nio-8077-exec-5] c.s.main.controller.PersonController     : PersonController | updatePerson is started
+2022-04-14 02:47:46.666  INFO 14900 --- [http-nio-8077-exec-5] c.s.main.service.impl.PersonService      : PersonService | updatePerson is started
+2022-04-14 02:47:46.666  INFO 14900 --- [http-nio-8077-exec-5] c.s.main.service.impl.PersonService      : PersonService | updatePerson | personId : 2
+2022-04-14 02:47:46.670  INFO 14900 --- [http-nio-8077-exec-5] c.s.main.service.impl.PersonService      : PersonService | updatePerson | updatedPerson : com.spingbootelk.main.model.Person@21
+2022-04-14 02:47:46.695  INFO 14900 --- [http-nio-8077-exec-5] c.s.main.controller.PersonController     : PersonController | updatePerson | Updated Person Info : com.spingbootelk.main.model.Person@21
+2022-04-14 02:47:50.750  INFO 14900 --- [http-nio-8077-exec-6] c.s.main.controller.PersonController     : PersonController | deletePerson is started
+2022-04-14 02:47:50.754  INFO 14900 --- [http-nio-8077-exec-6] c.s.main.service.impl.PersonService      : PersonService | deletePersonById is started
+2022-04-14 02:47:50.754  INFO 14900 --- [http-nio-8077-exec-6] c.s.main.service.impl.PersonService      : PersonService | deletePersonById | id : 2
+2022-04-14 02:47:50.782  INFO 14900 --- [http-nio-8077-exec-6] c.s.main.controller.PersonController     : PersonController | deletePerson | Person 2 is deleted
