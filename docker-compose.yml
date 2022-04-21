@@ -63,6 +63,8 @@ services:
     depends_on:
       - db
       - logstash
+      - kibana
+      - elasticsearch
     ports:
       - '8077:8077'
     environment:
