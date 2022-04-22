@@ -20,19 +20,25 @@
 
 <b>1 )</b> Install <b>Docker Desktop</b>. Here is the installation <b>link</b> : https://docs.docker.com/docker-for-windows/install/
 
-<b>2 )</b> Open <b>Terminal</b> under <b>resources</b> folder to run <b>all containers</b> on <b>Docker</b> Container
+<b>2 )</b> Look at the <b>.env</b> file in project's root directory if database schema, username or password are needed to be changed 
+
+<b>3 )</b> Use the command to read variables from <b>.env</b> file.
+```
+    docker-compose config
+```
+<b>4 )</b> Open <b>Terminal</b> under <b>resources</b> folder to run <b>all containers</b> on <b>Docker</b> Container
 ```
     docker-compose up -d
 ```
-<b>3 )</b> Open <b>ElasticSearch</b> in the Browser 
+<b>5 )</b> Open <b>ElasticSearch</b> in the Browser 
 ```
     http://localhost:9200/_cat/indices?v
 ```
-<b>4 )</b> Show <b>Indexs</b> in the <b>ElasticSearch</b> 
+<b>6 )</b> Show <b>Indexs</b> in the <b>ElasticSearch</b> 
 ```
     http://localhost:9200/_cat/indices?v
 ```
-<b>5 )</b> Open <b>Kibana</b> in the <b>Browser</b>
+<b>7 )</b> Open <b>Kibana</b> in the <b>Browser</b>
 ```
     http://localhost:5601/
 ```
