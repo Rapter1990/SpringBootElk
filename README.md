@@ -1,0 +1,41 @@
+# Spring Boot ELK(ElasticSearch, Logstash, Kibana)
+
+<img src="" alt="Main Information" width="800" height="300">
+
+### 📖 Information
+
+<ul style="list-style-type:disc">
+  <li>The aim of app manages collect logs from app through Logstash and then analyze them in ElasticSearch before visualizing them in Kibana</li>  
+  <li>Here is the explanation of the project
+      <ul>
+        <li>Implement the process of all CRUD operations to add logs through Postman</li>
+        <li>Collect logs and transfrom them through Logstash</li>
+        <li>Search and analyze them through ElasticSearch</li>
+        <li>Visualize and manage them through Kibana</li>
+      </ul>
+  </li>
+</ul>
+
+### 🔨 Run the App
+
+<b>1 )</b> Install <b>Docker Desktop</b>. Here is the installation <b>link</b> : https://docs.docker.com/docker-for-windows/install/
+
+<b>2 )</b> Open <b>Terminal</b> under <b>resources</b> folder to run <b>all containers</b> on <b>Docker</b> Container
+```
+    docker-compose up -d
+```
+<b>3 )</b> Open <b>ElasticSearch</b> in the Browser 
+```
+    http://localhost:9200/_cat/indices?v
+```
+<b>4 )</b> Show <b>Indexs</b> in the <b>ElasticSearch</b> 
+```
+    http://localhost:9200/_cat/indices?v
+```
+<b>5 )</b> Open <b>Kibana</b> in the <b>Browser</b>
+```
+    http://localhost:5601/
+```
+
+
+
