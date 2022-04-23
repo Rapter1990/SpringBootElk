@@ -72,6 +72,9 @@ services:
       - SPRING_DATASOURCE_USERNAME=springexample
       - SPRING_DATASOURCE_PASSWORD=111111
       - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+    networks:
+      - elk
+
   db:
     container_name: db
     image: 'mysql:latest'
@@ -85,6 +88,8 @@ services:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
     volumes:
       - db-data:/var/lib/mysql
+    networks:
+      - elk
 
 # Volumes
 volumes:
