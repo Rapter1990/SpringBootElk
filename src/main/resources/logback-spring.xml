@@ -14,14 +14,17 @@
             <fileNamePattern>${log.fileName}.%d{yyyy-MM-dd}.${log.fileExtension}</fileNamePattern>
         </rollingPolicy>
         <encoder>
-            <pattern>[%d{yyyy-MM-dd HH:mm:ss.SSS}] [${HOSTNAME}] [%thread] %level %logger{36}@%method:%line - %msg%n</pattern>
+            <pattern>[%d{yyyy-MM-dd HH:mm:ss.SSS,Europe/Istanbul}] [${HOSTNAME}] [%thread] %level %logger{36}@%method:%line - %msg%n</pattern>
         </encoder>
     </appender>
 
     <appender name="STASH" class="net.logstash.logback.appender.LogstashTcpSocketAppender">
         <destination>logstash:5044</destination>
         <!-- encoder is required -->
-        <encoder class="net.logstash.logback.encoder.LogstashEncoder"/>
+        <encoder class="net.logstash.logback.encoder.LogstashEncoder">
+            <timeZone>UTC+3</timeZone>
+            <timestampPattern>yyyy-MM-dd HH:mm:ss.SSS,Europe/Istanbul</timestampPattern>
+        </encoder>
         <keepAliveDuration>5 minutes</keepAliveDuration>
     </appender>
 
