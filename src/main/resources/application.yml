@@ -24,6 +24,8 @@ elasticsearch:
 logging:
   file:
     name: Springboot-Elk.log
+  pattern:
+    dateformat: yyyy-MM-dd HH:mm:ss.SSS,Europe/Istanbul
   logback:
     rollingpolicy:
       file-name-pattern: Springboot-Elk-%d{yyyy-MM-dd}.%i.log
