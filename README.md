@@ -10,6 +10,7 @@
       <ul>
         <li>docker-compose reads variables from .env file.</li>
         <li>Implement the process of all CRUD operations to add logs through Postman</li>
+        <li>Send Logs defined in configuration to Logstash through Filebeat</li>
         <li>Collect logs and transfrom them through Logstash</li>
         <li>Search and analyze them through ElasticSearch</li>
         <li>Visualize and manage them through Kibana</li>
