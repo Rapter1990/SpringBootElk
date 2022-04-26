@@ -154,7 +154,6 @@
    http://localhost:8077/api/api/persons/26
 ```
 
-
 ### Screenshots
 
 <details>
