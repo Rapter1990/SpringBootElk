@@ -1,6 +1,6 @@
 # Spring Boot ELK(ElasticSearch, Logstash, Kibana)
 
-<img src="/screenshots/main.PNG" alt="Main Information" width="800" height="300">
+<img src="/screenshots/main.PNG" alt="Main Information" width="800" height="450">
 
 ### 📖 Information
 
