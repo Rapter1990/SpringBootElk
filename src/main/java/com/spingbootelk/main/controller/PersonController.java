@@ -3,21 +3,21 @@ package com.spingbootelk.main.controller;
 import com.spingbootelk.main.error.ResourceNotFoundException;
 import com.spingbootelk.main.model.Person;
 import com.spingbootelk.main.service.impl.PersonService;
+import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("/api")
+@RequiredArgsConstructor
 public class PersonController {
 
     private final Logger LOGGER = LoggerFactory.getLogger(getClass());
 
-    @Autowired
-    PersonService personService;
+    private final PersonService personService;
 
     // http://localhost:8077/api/api/persons
     @GetMapping("/persons")

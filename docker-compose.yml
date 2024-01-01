@@ -1,7 +1,7 @@
-version: '3.8'
+version: '3.9'
 services:
   logstash:
-    image: docker.elastic.co/logstash/logstash:7.15.2
+    image: docker.elastic.co/logstash/logstash:8.11.3
     user: root
     command: -f /etc/logstash/conf.d/
     volumes:
@@ -29,7 +29,7 @@ services:
       - logstash
 
   kibana:
-    image: docker.elastic.co/kibana/kibana:7.15.2
+    image: docker.elastic.co/kibana/kibana:8.11.3
     user: root
     volumes:
       - ./elk/kibana/:/usr/share/kibana/config/
@@ -42,7 +42,7 @@ services:
       - elk
 
   elasticsearch:
-    image: docker.elastic.co/elasticsearch/elasticsearch:7.15.2
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.11.3
     user: root
     volumes:
       - ./elk/elasticsearch/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
@@ -94,7 +94,6 @@ services:
 # Volumes
 volumes:
   db-data:
-
 
 networks:
   elk:
